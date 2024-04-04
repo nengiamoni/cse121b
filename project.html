@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 121b |project: InspireMe API - Random Quote Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <nav>
+        <ul id="menu">
+            <li><a id="toggleMenu">&equiv;</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="w01-task.html">W1 Task</a></li>
+            <li><a href="w03-task.html" class="active">W3 Task</a></li>
+            <li><a href="w04-task.html">W4 Task</a></li>
+            <li><a href="w05-task.html">W5 Task</a></li>
+            <li><a href="project.html">Project</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>InspireMe API</h1>
+            <h2>Random Quote Generator</h2>
+        </header>
+        <main>
+            <div class="quote-box" id="quote-container">
+                <p id="quote">"'It's not whether you get knocked down, it's whether you get up.'"</p>
+                <p id="author">- Vince Lombardi</p>
+            </div>
+            <button id="getQuoteBtn">Get Another Quote</button>
+        </main>
+        <footer>
+            <p>&copy; 2024 InspireMe API. All rights reserved.</p>
+        </footer>
+        <script src="scripts/main.js"></script>
+        <script>
+          document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </div>
+
+    <script src="scripts/project.js"></script>
+</body>
+</html>

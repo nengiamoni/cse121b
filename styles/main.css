@@ -166,6 +166,75 @@ footer {
     position: fixed;
     bottom: 0;
 }
+/* Reset default browser styles */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+h2 {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#quote-container {
+    margin-bottom: 20px;
+}
+
+#quote {
+    font-size: 20px;
+    color: #333;
+}
+
+#author {
+    font-style: italic;
+    color: #444;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Box for the quotes */
+.quote-box {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: burlywood;
+}
+
 
 /* Class Selectors */
 .active {
@@ -278,6 +347,7 @@ footer {
     box-shadow: 0 0 30px #777;
     margin: .5rem;
 }
+
 
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
