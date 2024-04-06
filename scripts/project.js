@@ -1,26 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const quoteDisplay = document.getElementById('quote');
-    const authorDisplay = document.getElementById('author');
-    const getQuoteBtn = document.getElementById('getQuoteBtn');
+const quoteDisplay = document.getElementById("quote");
+const authorDisplay = document.getElementById("author");
+const getQuoteBtn = document.getElementById("getQuoteBtn");
 
-    getQuoteBtn.addEventListener('click', getQuote);
+const url = "https://famous-quotes4.p.rapidapi.com/random?category=all&count=1";
 
-    function getQuote() {
-        fetch('https://healthruwords.p.rapidapi.com/v1/quotes', {
-            method: 'GET',
-            headers: {
-                'x-rapidapi-host': 'healthruwords.p.rapidapi.com',
-                'x-rapidapi-key': '221be7ed9dmsh496def788ac5c4ep1d893djsn5ee1948874d1' // Replace 'YOUR-RAPIDAPI-KEY' with your actual RapidAPI key
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
-                // Extract quote and author from the response
-                const { quote, author } = data;
-                // Update DOM with the retrieved quote
-                quoteDisplay.textContent = `"${quote}"`;
-                authorDisplay.textContent = `- ${author}`;
-            })
-            .catch(error => console.error('Error fetching quote:', error));
-    }
-});
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "bb4467594emshfbec6589d11288ep10463ejsnba6e65514b71",
+    "X-RapidAPI-Host": "famous-quotes4.p.rapidapi.com",
+  },
+};
+
+getQuoteBtn.addEventListener("click", getQuote);
+
+async function getQuote() {
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    const { author, text } = result[0];
+
+    quoteDisplay.textContent = "${text}";
+    authorDisplay.textContent = - ${author};
+  } catch (error) {
+    console.error(error);
+  }
+}
