@@ -20,8 +20,8 @@ async function getQuote() {
     const result = await response.json();
     const { author, text } = result[0];
 
-    quoteDisplay.textContent = "${text}";
-    authorDisplay.textContent = - ${author};
+    quoteDisplay.textContent = `"${text}"`;
+    authorDisplay.textContent = `- ${author}`;
   } catch (error) {
     console.error(error);
   }
